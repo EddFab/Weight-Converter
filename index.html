@@ -19,42 +19,48 @@
             <h1 class="col-sm-8 text-center">Weight Converter</h1>
             <div class="col-sm-2"></div>
         </div>
+        <!--INPUT IN POUNDS-->
         <div class="row">
             <div class="col-sm-2"></div>
             <form class="col-sm-8" action="">
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="number" placeholder="Enter Pounds...">
+                    <input class="form-control form-control-lg" type="number" placeholder="enter pounds..." id="lbsinput">
                 </div>
             </form>
             <div class="col-sm-2"></div>
         </div>
-        
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="card col-sm-8" id="first">
-                <div class="card-block">
-                    <h4>Grams</h4>
+        <!--CARDS WITH OUTPUTS-->
+        <div id="output">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="card col-sm-8 mb-2" id="firstcard">
+                    <div class="card-block">
+                        <h4>Grams:</h4>
+                        <div id="gramsoutput"></div>
+                    </div>
                 </div>
+                <div class="col-sm-2"></div>
             </div>
-            <div class="col-sm-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="card col-sm-8">
-                <div class="card-block">
-                    <h4>Grams</h4>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="card col-sm-8 mb-2" id="secondcard">
+                    <div class="card-block">
+                        <h4>Kilograms:</h4>
+                        <div id="kilogramsoutput"></div>
+                    </div>
                 </div>
+                <div class="col-sm-2"></div>
             </div>
-            <div class="col-sm-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="card col-sm-8">
-                <div class="card-block">
-                    <h4>Grams</h4>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="card col-sm-8 mb-2" id="thirdcard">
+                    <div class="card-block">
+                        <h4>Ounces:</h4>
+                        <div id="ouncesoutput"></div>
+                    </div>
                 </div>
+                <div class="col-sm-2"></div>
             </div>
-            <div class="col-sm-2"></div>
         </div>
     </div>
     <!-- jQUERY READ-ONLY -->

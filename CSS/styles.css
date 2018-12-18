@@ -1,17 +1,23 @@
 body{
     background-color: #333;
-    /*color: white;*/
+    color: white;
+    padding: 25px;
 }
 
-#first{
-    background: #0099cc;
-    color: #ffffff;
+#firstcard{
+    background: #41D8AB;
+    color: #fff;
+    padding:15px;
 }
 
-#second{
-    
+#secondcard{
+    background: #35B28D;
+    color: #fff;
+    padding: 15px;
 }
 
-#third{
-    
+#thirdcard{
+    background: #1E6650;
+    color: #fff;
+    padding: 15px;
 }
