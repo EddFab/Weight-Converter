@@ -1,6 +1,6 @@
 body{
     background-color: #333;
-    color: white;
+    color: #fff;
     padding: 25px;
     font-family: 'Montserrat', sans-serif; 
 }
@@ -12,21 +12,18 @@ h1{
 
 #firstcard{
     background: #41D8AB;
-    color: #fff;
     padding:15px;
     opacity:0.8;
 }
 
 #secondcard{
     background: #35B28D;
-    color: #fff;
     padding: 15px;
     opacity:0.8;
 }
 
 #thirdcard{
     background: #1E6650;
-    color: #fff;
     padding: 15px;
     opacity:0.8;
 }
