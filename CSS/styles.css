@@ -2,22 +2,31 @@ body{
     background-color: #333;
     color: white;
     padding: 25px;
+    font-family: 'Raleway', sans-serif; 
+}
+h1{
+    color: aquamarine;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 60px;
 }
 
 #firstcard{
     background: #41D8AB;
     color: #fff;
     padding:15px;
+    opacity:0.8;
 }
 
 #secondcard{
     background: #35B28D;
     color: #fff;
     padding: 15px;
+    opacity:0.8;
 }
 
 #thirdcard{
     background: #1E6650;
     color: #fff;
     padding: 15px;
+    opacity:0.8;
 }
