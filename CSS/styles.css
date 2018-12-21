@@ -31,3 +31,7 @@ h1 {
 .btn{
     background-color: aquamarine;
 }
+.btn:hover{
+    background-color: #1E6650;
+    color: white;
+}
