@@ -6,3 +6,24 @@ document.getElementById("lbsinput").addEventListener('input', function(e){
     document.getElementById("ouncesoutput").innerHTML = lbs * 16;
 });
 */
+
+$(document).ready(function () {
+    
+    /************************
+    ON FIRST BUTTON CLICK    
+    ************************/
+    $("#firstbutton").click(function () {
+        
+        if ($("#metricinput").attr("placeholder") == "enter weight in pounds...") {// IF THE CURRENT UNIT IS POUNDS
+            $("#metricinput").attr("placeholder", "enter weight in grams...");// CHANGE UNIT TO GRAMS
+            $("#firstbutton").html("LB");//CHANGE BUTTON TO POUNDS
+            $("#firstheading").html("Pounds");//CHANGE CARD HEADING TO POUNDS
+        } else {
+            $("#metricinput").attr("placeholder", "enter weight in pounds...");
+            $("#firstbutton").html("G");
+            $("#firstheading").html("Grams");
+        }
+        
+    });
+
+});
