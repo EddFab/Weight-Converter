@@ -14,6 +14,17 @@ $(document).ready(function () {
     ************************/
     $("#firstbutton").click(function () {
         
+        var currentmu = $("#metricinput").attr("placeholder");
+        
+        if ( $("#firstbutton").html = "G" ) {
+            if (currentmu = "enter weight in pounds..."){
+                
+            }
+        } else if ( $("#firstbutton").html = "G" ) {
+            
+        }
+        
+        /*
         if ($("#metricinput").attr("placeholder") == "enter weight in pounds...") {// IF THE CURRENT UNIT IS POUNDS
             $("#metricinput").attr("placeholder", "enter weight in grams...");// CHANGE UNIT TO GRAMS
             $("#firstbutton").html("LB");//CHANGE BUTTON TO POUNDS
@@ -22,7 +33,7 @@ $(document).ready(function () {
             $("#metricinput").attr("placeholder", "enter weight in pounds...");
             $("#firstbutton").html("G");
             $("#firstheading").html("Grams");
-        }
+        }*/
         
     });
 
