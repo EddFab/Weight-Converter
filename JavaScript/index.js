@@ -14,47 +14,27 @@ $(document).ready(function () {
     /************************
     ON FIRST BUTTON CLICK    
     ************************/
-    $("#firstbutton").click(function () {
-        var original;
+    $("#firstbutton").on("click", function () {
 
-        var whichbutton = ($(this).text = "G") ? "LB" : "G";
+        var changebutton;
 
-        function inputchangegram() {
-            $("#metricinput").attr("placeholder", "enter weight in grams..."); //CHANGE UNIT TO GRAMS
-            $("#firstbutton").text(whichbutton); //CHANGE BUTTON TO POUNDS
-            $("#firstheading").html("Pounds:"); //CHANGE CARD HEADING TO POUNDS
-            var original = false;
+        if ( $(this).text() == "G" ) {
+            
+            changebutton = function () {
+                $("#firstbutton").text("LB");
+            };
+            
+        } 
+        
+        else {
+            
+            changebutton = function () {
+                $("#firstbutton").text("G");
+            };
+            
         }
+        
+        changebutton();
 
-        function inputchangepound() {
-            $("#metricinput").attr("placeholder", "enter weight in pounds..."); //CHANGE UNIT TO POUNDS        
-            $("#firstbutton").text(whichbutton); //CHANGE BUTTON TO GRAMS
-            $("#firstheading").html("Grams:"); //CHANGE CARD HEADING TO GRAMS
-            var orginial = true;
-        }
-
-        ($(this).text = "G") ? inputchangegram() : inputchangepound();
-        /*
-        if ($(this).text = "G") {
-            $(this).text = ($(this).text = "G") ? inputchangegram() : inputchangepound();
-        } else if ($(this).text = "LB") {
-            $(this).text = ($(this).text = "G") ? inputchangegram() : inputchangepound();
-        }*/
-
-        //var currentmu = $("#metricinput").attr("placeholder"); //CREATE VARIABLE EQUAL TO THE CURRENT INPUT'S METRIC
-
-
-        /*  if ($(this).text = "G") { // IF THE FIRST BUTTON CLICKED IS GRAMS
-              $("#metricinput").attr("placeholder", "enter weight in grams..."); //CHANGE UNIT TO GRAMS
-              $("#firstbutton").text(whichbutton); //CHANGE BUTTON TO POUNDS
-              $("#firstheading").html("Pounds:"); //CHANGE CARD HEADING TO POUNDS
-          }         
-          
-          else if (fake = false) {
-              $("#metricinput").attr("placeholder", "enter weight in pounds..."); //CHANGE UNIT TO POUNDS
-              $("#firstbutton").text(whichbutton); //CHANGE BUTTON TO GRAMS
-              $("#firstheading").html("Grams:"); //CHANGE CARD HEADING TO GRAMS
-          } */
     });
-
 });
