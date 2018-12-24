@@ -10,31 +10,40 @@ document.getElementById("lbsinput").addEventListener('input', function(e){
 ON DOCLOAD    
 **************/
 $(document).ready(function () {
-
+    
+    $("input").focus();
+    
     /************************
     ON FIRST BUTTON CLICK    
     ************************/
     $("#firstbutton").on("click", function () {
 
-        var changebutton;
+        var changebutton; //CREATE VARIABLE FOR FUNCTION
+        if ($(this).text() == "G") { // IF THE BUTTON PRESSED WAS GRAMS
 
-        if ( $(this).text() == "G" ) {
-            
-            changebutton = function () {
-                $("#firstbutton").text("LB");
+            changebutton = function () { //FUNCTION NAMED "CHANGEBUTTON" EQUALS
+                $("#firstbutton").text("LB"); // CHANGE BUTTON FROM GRAMS TO POUNDS
+                $("#metricinput").attr("placeholder", "enter weight in grams..."); //CHANGE UNIT TO GRAMS
+                $("#firstheading").html("Pounds:"); //CHANGE CARD HEADING TO POUNDS
+                $("input").focus();
             };
-            
-        } 
-        
-        else {
-            
-            changebutton = function () {
-                $("#firstbutton").text("G");
+
+        } else {
+
+            changebutton = function () { //FUNCTION NAMED "CHANGEBUTTON" EQUALS
+                $("#firstbutton").text("G"); // CHANGE BUTTON FROM POUNDS TO GRAMS
+                $("#metricinput").attr("placeholder", "enter weight in pounds..."); //CHANGE UNIT TO POUNDS
+                $("#firstheading").html("Grams:"); //CHANGE CARD HEADING TO GRAMS
+                $("input").focus();
             };
-            
+
         }
-        
         changebutton();
+        $("input").focus();
 
     });
+    /*****************************
+    END ON FIRST BUTTON CLICK    
+    ******************************/
+    
 });
