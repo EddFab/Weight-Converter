@@ -127,7 +127,23 @@ $(document).ready(function () {
 
     });
     /*****************************
-    END ON SECOND BUTTON CLICK    
+    END ON THIRD BUTTON CLICK    
     ******************************/
+
+    $("input").on("input", function () {
+        var whatinput; //= $("#metricinput").attr("placeholder");
+
+        if ($("#metricinput").attr("placeholder") == "enter weight in pounds...") {
+
+            let lbs = $(this).val();
+            whatinput = function () {
+                document.getElementById("gramsoutput").innerHTML = lbs / 0.002204;
+                document.getElementById("kilogramsoutput").innerHTML = lbs / 2.2046;
+                document.getElementById("ouncesoutput").innerHTML = lbs * 16;
+
+            }
+        }
+        whatinput();
+    });
 
 });
