@@ -1,14 +1,3 @@
-/*
-document.getElementById("lbsinput").addEventListener('input', function(e){
-    let lbs = e.target.value;
-    document.getElementById("gramsoutput").innerHTML = lbs / 0.002204;
-    document.getElementById("kilogramsoutput").innerHTML = lbs / 2.2046;
-    document.getElementById("ouncesoutput").innerHTML = lbs * 16;
-});
-*/
-/*************
-ON DOCLOAD    
-**************/
 $(document).ready(function () {
 
     $("input").focus();
@@ -23,6 +12,9 @@ $(document).ready(function () {
         $("#thirdbutton").text("OZ");
         $("#secondheading").html("Kilograms:");
         $("#thirdheading").html("Ounces:");
+        $("#gramsoutput").html(0);
+        $("#kilogramsoutput").html(0);
+        $("#ouncesoutput").html(0);
 
         var changebutton; //CREATE VARIABLE FOR FUNCTION
         if ($(this).text() == "G") { // IF THE BUTTON PRESSED WAS GRAMS
@@ -48,9 +40,7 @@ $(document).ready(function () {
         $("input").focus();
 
     });
-    /*****************************
-    END ON FIRST BUTTON CLICK    
-    ******************************/
+
 
     /************************
     ON SECOND BUTTON CLICK    
@@ -62,6 +52,9 @@ $(document).ready(function () {
         $("#thirdbutton").text("OZ");
         $("#firstheading").html("Grams:");
         $("#thirdheading").html("Ounces:");
+        $("#gramsoutput").html(0);
+        $("#kilogramsoutput").html(0);
+        $("#ouncesoutput").html(0);
 
         var changebutton; //CREATE VARIABLE FOR FUNCTION
         if ($(this).text() == "KG") { // IF THE BUTTON PRESSED WAS KILOGRAMS
@@ -87,9 +80,6 @@ $(document).ready(function () {
         $("input").focus();
 
     });
-    /*****************************
-    END ON SECOND BUTTON CLICK    
-    ******************************/
 
     /************************
     ON THIRD BUTTON CLICK    
@@ -101,6 +91,9 @@ $(document).ready(function () {
         $("#secondbutton").text("KG");
         $("#firstheading").html("Grams:");
         $("#secondheading").html("Kilograms:");
+        $("#gramsoutput").html(0);
+        $("#kilogramsoutput").html(0);
+        $("#ouncesoutput").html(0);
 
         var changebutton; //CREATE VARIABLE FOR FUNCTION
         if ($(this).text() == "OZ") { // IF THE BUTTON PRESSED WAS OUNCES
@@ -126,24 +119,33 @@ $(document).ready(function () {
         $("input").focus();
 
     });
-    /*****************************
-    END ON THIRD BUTTON CLICK    
-    ******************************/
 
+    /******************
+    ON INPUT CHANGE
+    *******************/
     $("input").on("input", function () {
-        var whatinput; //= $("#metricinput").attr("placeholder");
+
+        var numbercheck = function () {
+            alert("Please Enter Numeric Values Only");
+            $("input").val("");
+            $("input").focus();
+        };
+
+        ($.isNumeric($(this).val())) ? $("input").focus() : numbercheck();
+
+        var changeoutput;
 
         if ($("#metricinput").attr("placeholder") == "enter weight in pounds...") {
 
-            let lbs = $(this).val();
-            whatinput = function () {
-                document.getElementById("gramsoutput").innerHTML = lbs / 0.002204;
-                document.getElementById("kilogramsoutput").innerHTML = lbs / 2.2046;
-                document.getElementById("ouncesoutput").innerHTML = lbs * 16;
-
+            let output = $(this).val();
+            changeoutput = function () {
+                $("#gramsoutput").html((output / 0.002204).toFixed(2));
+                $("#kilogramsoutput").html((output / 2.2046).toFixed(2));
+                $("#ouncesoutput").html((output * 16).toFixed(2));
             }
+
         }
-        whatinput();
+        changeoutput();
     });
 
 });
