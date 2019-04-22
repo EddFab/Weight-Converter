@@ -1,3 +1,3 @@
 # Weight-Converter
 
-![alt text](images/screenshot.jpeg "Description goes here")
+![alt text](images/screenshot.png "Description goes here")
